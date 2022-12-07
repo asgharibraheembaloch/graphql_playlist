@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect("mongodb+srv://asgharibraheem:askari@5718@cluster0.56nr7no.mongodb.net/gql-ninja",{ useNewUrlParser: true, useUnifiedTopology:true });
+mongoose.connect("",{ useNewUrlParser: true, useUnifiedTopology:true });
 
 mongoose.connection.once('open', () => {
   console.log('conneted to database');
