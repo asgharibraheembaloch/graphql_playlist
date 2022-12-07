@@ -2,10 +2,12 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
+var dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 
-mongoose.connect("",{ useNewUrlParser: true, useUnifiedTopology:true });
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING,{ useNewUrlParser: true, useUnifiedTopology:true });
 
 mongoose.connection.once('open', () => {
   console.log('conneted to database');
