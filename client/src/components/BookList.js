@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import { getBookQuery } from "../queries/queries";
+import { getBooksQuery } from "../queries/queries";
 
 class BookList extends Component {  
     displayBooks(){
@@ -28,4 +28,4 @@ class BookList extends Component {
   }
 }
 
-export default graphql(getBookQuery)(BookList);
+export default graphql(getBooksQuery)(BookList);
